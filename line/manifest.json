@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "LINEスタンプ・絵文字取得",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/128x128.png"
+    }
+  },
+  "host_permissions": [
+    "https://store.line.me/stickershop/product/*"
+  ]
+}
