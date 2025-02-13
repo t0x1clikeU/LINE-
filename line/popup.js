@@ -10,8 +10,9 @@ document.getElementById('fetchImages').addEventListener('click', async () => {
         if (results && results[0].result) {
             displayImages(results[0].result);
         } else {
-            console.error("画像が取得できませんでした");
-            alert("画像が見つかりませんでした。");
+            if (confirm("画像が見つかりませんでした。\nスタンプを選ぶには以下のURLを開きますか？\n\nhttps://store.line.me/home/ja")) {
+            window.open("https://store.line.me/home/ja", "_blank");
+        }
         }
     } catch (error) {
 
@@ -89,7 +90,9 @@ function displayImages(imageUrls) {
     });
 
     if (imageUrls.length === 0) {
-        alert('画像が見つかりませんでした');
+        if (confirm("画像が見つかりませんでした。\nスタンプを選ぶには以下のURLを開きますか？\n\nhttps://store.line.me/home/ja")) {
+            window.open("https://store.line.me/home/ja", "_blank");
+        }
     }
 }
 
